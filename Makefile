@@ -6,30 +6,33 @@
 #    By: oel-mado <oel-mado@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/02 21:35:20 by oel-mado          #+#    #+#              #
-#    Updated: 2025/03/14 19:58:27 by oel-mado         ###   ########.fr        #
+#    Updated: 2025/04/05 15:13:54 by oel-mado         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = cc -Wall -Wextra -Werror
 
-CFLAGS = -Wall -Wextra -Werror
+NAME = circle
+CC = cc
+CFLAGS = -g -Wall -Wextra -Werror -IMLX42/include
 
-NAME = fractol
+MLXFLAGS = -Iinclude -ldl -lglfw -L"/Users/oel-mado/goinfre/homebrew/Cellar/glfw/3.4/lib" -pthread -lm -framework Cocoa -framework OpenGL -framework IOKit
 
-LIB = libft/libft.a
+MLX_DIR = MLX42/build/libmlx42.a
 
-all:
+SRCS = main.c circle.c put.c Mandelbrot.c
 
-$(LIB):
-	make -C libft re
-	make -C libft clean
+OBJS = $(SRCS:.c=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) $(MLX_DIR) -o $(NAME) $(MLXFLAGS)
 
 clean:
+	rm -f $(OBJS)
 
 fclean: clean
-	make -C libft fclean
-	rm -f ${NAME}
+	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re

@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol.c                                          :+:      :+:    :+:   */
+/*   Mandelbrot.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oel-mado <oel-mado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/02 21:24:03 by oel-mado          #+#    #+#             */
-/*   Updated: 2025/04/05 15:22:41 by oel-mado         ###   ########.fr       */
+/*   Created: 2025/03/20 01:05:48 by oel-mado          #+#    #+#             */
+/*   Updated: 2025/04/04 20:19:40 by oel-mado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int	main(int ac, char **av)
+void	fill_screen(t_data *data)
 {
-	int	i;
+	int	x;
+	int	y;
 
-	i = 0;
-	if (ac == 2)
+	x = 0;
+	while (x < WIDTH)
 	{
-		if (!ft_strncmp(av[1], "Mandelbrot", 11)
-			|| !ft_strncmp(av[1], "mandelbrot", 11))
-			mandelbrot();
-		else if (!ft_strncmp(av[1], "Julia", 6)
-			|| !ft_strncmp(av[1], "julia", 6))
-			
+		y = 0;
+		while (y < HEIGHT)
+		{
+			mlx_put_pixel(data->img, x, y, 0xFF0000FF);
+			y++;
+		}
+		x++;
 	}
+	mlx_image_to_window(data->mlx, data->img, 0, 0);
 }
-
-
-
-
-
