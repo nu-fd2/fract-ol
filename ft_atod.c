@@ -6,13 +6,13 @@
 /*   By: oel-mado <oel-mado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 04:15:06 by oel-mado          #+#    #+#             */
-/*   Updated: 2025/04/07 08:23:57 by oel-mado         ###   ########.fr       */
+/*   Updated: 2025/04/08 14:52:35 by oel-mado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-double	ft_atob(char *arg)
+double	ft_atod(char *arg)
 {
 	double (n), (f);
 	int (d), (i), (s);
