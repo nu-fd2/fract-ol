@@ -6,7 +6,7 @@
 /*   By: oel-mado <oel-mado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 21:24:36 by oel-mado          #+#    #+#             */
-/*   Updated: 2025/04/08 14:52:19 by oel-mado         ###   ########.fr       */
+/*   Updated: 2025/04/08 21:46:32 by oel-mado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,14 @@ typedef struct s_data
 	double		ci;
 	double		zr;
 	double		zi;
+	double		zoom;
+	char		s;
 }				t_data;
 
 double	ft_atod(char *arg);
 void	is_error(bool s);
 void	mandelbrot(t_data *data);
-void	julia(double cr, double ci, t_data *data);
+void	julia(t_data *data);
 void	do_fractol(int ac, char **av, t_data *data);
 
 void 	put(mlx_image_t *img, int x, int y, uint32_t color);

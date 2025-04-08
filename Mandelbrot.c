@@ -6,7 +6,7 @@
 /*   By: oel-mado <oel-mado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 01:05:48 by oel-mado          #+#    #+#             */
-/*   Updated: 2025/04/08 15:49:48 by oel-mado         ###   ########.fr       */
+/*   Updated: 2025/04/08 21:51:44 by oel-mado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int32_t	m_equation(t_data *data)
 	itr = 0;
 	data->zr = 0;
 	data->zi = 0;
-	while ((data->zr * data->zr) + (data->zi * data->zi) < 5 && itr < 100)
+	while ((data->zr * data->zr) + (data->zi * data->zi) < 5 && itr < 10)
 	{
-		// data->zr = fabs(data->zr);
-		// data->zi = fabs(data->zi);
+		data->zr = fabs(data->zr);
+		data->zi = fabs(data->zi);
 		tmp = (data->zr * data->zr) - (data->zi * data->zi) + data->cr;
 		data->zi = (2 * data->zr * data->zi) + data->ci;
 		data->zr = tmp;
@@ -46,10 +46,10 @@ void	mandelbrot(t_data *data)
 	while (y < H)
 	{
 		x = 0;
-		data->ci = (y / (double)H) * (2 - (-2)) + (-2);
+		data->ci = (((y / (double)H) * 4) - 2) * data->zoom;
 		while (x < W)
 		{
-			data->cr = (x / (double)W) * (2 - (-2)) + (-2);
+			data->cr = (((x / (double)W) * 4) - 2) * data->zoom;
 			color = m_equation(data);
 			put(data->img, x, y, color);
 			x++;
