@@ -6,7 +6,7 @@
 /*   By: oel-mado <oel-mado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 01:05:48 by oel-mado          #+#    #+#             */
-/*   Updated: 2025/04/08 14:47:55 by oel-mado         ###   ########.fr       */
+/*   Updated: 2025/04/08 15:49:48 by oel-mado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int32_t	m_equation(t_data *data)
 	data->zi = 0;
 	while ((data->zr * data->zr) + (data->zi * data->zi) < 5 && itr < 100)
 	{
+		// data->zr = fabs(data->zr);
+		// data->zi = fabs(data->zi);
 		tmp = (data->zr * data->zr) - (data->zi * data->zi) + data->cr;
 		data->zi = (2 * data->zr * data->zi) + data->ci;
 		data->zr = tmp;
