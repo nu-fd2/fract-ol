@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol.c                                          :+:      :+:    :+:   */
+/*   is_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oel-mado <oel-mado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/02 21:24:03 by oel-mado          #+#    #+#             */
-/*   Updated: 2025/04/10 00:42:33 by oel-mado         ###   ########.fr       */
+/*   Created: 2025/04/06 04:16:22 by oel-mado          #+#    #+#             */
+/*   Updated: 2025/04/10 01:01:42 by oel-mado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h" 
+#include "../fractol.h"
 
-int	main(int ac, char **av)
+void	is_error(void)
 {
-	t_data	data;
-
-	if (ac == 1)
-		is_error();
-	data.ci = 0;
-	data.cr = 0;
-	data.zoom = 1;
-	data.mlx = mlx_init(W, H, av[1], false);
-	data.img = mlx_new_image(data.mlx, W, H);
-	do_fractol(ac, av, &data);
-	mlx_loop(data.mlx);
+	write(1, "\033[1;33mTry:\033[0m\n", 16);
+	write(1, "\033[1;32m./fractol mandelbrot\033[0m\n", 32);
+	write(1, "\033[1;33mOr:\033[0m\n", 15);
+	write(1, "\033[1;32m./fractol julia <r> <i>\033[0m\n", 35);
+	write(1, "\033[1;35m-2 < r < 2 and -2 < i < 2\033[0m\n", 37);
+	exit(1);
 }

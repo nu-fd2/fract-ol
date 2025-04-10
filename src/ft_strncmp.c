@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol.c                                          :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oel-mado <oel-mado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/02 21:24:03 by oel-mado          #+#    #+#             */
-/*   Updated: 2025/04/10 00:42:33 by oel-mado         ###   ########.fr       */
+/*   Created: 2024/10/26 19:03:31 by oel-mado          #+#    #+#             */
+/*   Updated: 2025/04/09 22:11:30 by oel-mado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h" 
+#include "../fractol.h"
 
-int	main(int ac, char **av)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	t_data	data;
+	size_t			i;
+	unsigned char	*p1;
+	unsigned char	*p2;
 
-	if (ac == 1)
-		is_error();
-	data.ci = 0;
-	data.cr = 0;
-	data.zoom = 1;
-	data.mlx = mlx_init(W, H, av[1], false);
-	data.img = mlx_new_image(data.mlx, W, H);
-	do_fractol(ac, av, &data);
-	mlx_loop(data.mlx);
+	i = 0;
+	p1 = (unsigned char *)s1;
+	p2 = (unsigned char *)s2;
+	while ((p1[i] || p2[i]) && i < n)
+	{
+		if (p1[i] != p2[i])
+			return (p1[i] - p2[i]);
+		i++;
+	}
+	return (0);
 }

@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol.h                                          :+:      :+:    :+:   */
+/*   fractol_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oel-mado <oel-mado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 21:24:36 by oel-mado          #+#    #+#             */
-/*   Updated: 2025/04/10 01:01:52 by oel-mado         ###   ########.fr       */
+/*   Updated: 2025/04/10 01:01:18 by oel-mado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRACTOL_H
-# define FRACTOL_H
+#ifndef FRACTOL_BONUS_H
+# define FRACTOL_BONUS_H
 
-# include "MLX42/include/MLX42/MLX42.h"
+# include "../MLX42/include/MLX42/MLX42.h"
 # include <stdlib.h>
 # include <unistd.h>
+# include <math.h>
 
 # define W 800
 # define H 800
@@ -37,7 +38,8 @@ double			ft_atod(char *arg);
 void			is_error(void);
 void			mandelbrot(t_data *data);
 void			julia(t_data *data);
+void			burning_ship(t_data *data);
 void			do_fractol(int ac, char **av, t_data *data);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 
-#endif // FRACTOL_H
+#endif // FRACTOL_BONUS_H
