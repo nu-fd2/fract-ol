@@ -6,7 +6,7 @@
 /*   By: oel-mado <oel-mado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 09:19:28 by oel-mado          #+#    #+#             */
-/*   Updated: 2025/04/10 00:49:26 by oel-mado         ###   ########.fr       */
+/*   Updated: 2025/04/10 01:33:54 by oel-mado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	scroller(double xdelta, double ydelta, void *param)
 		mandelbrot(bruh);
 	else if (bruh->s == 'j')
 		julia(bruh);
-	else if (bruh->s == 'j')
+	else if (bruh->s == 'b')
 		burning_ship(bruh);
 }
 
@@ -49,7 +49,7 @@ void	do_fractol(int ac, char **av, t_data *data)
 		data->s = 'm';
 		mandelbrot(data);
 	}
-	if ((ac == 2 && !ft_strncmp(av[1], "burning_ship", 13)))
+	else if ((ac == 2 && !ft_strncmp(av[1], "burning_ship", 13)))
 	{
 		data->s = 'b';
 		burning_ship(data);
