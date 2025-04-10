@@ -6,11 +6,11 @@
 /*   By: oel-mado <oel-mado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 09:19:28 by oel-mado          #+#    #+#             */
-/*   Updated: 2025/04/10 00:43:51 by oel-mado         ###   ########.fr       */
+/*   Updated: 2025/04/10 01:58:17 by oel-mado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../fractol.h"
+#include "fractol.h"
 
 void	hoo(mlx_key_data_t keydata, void *param)
 {

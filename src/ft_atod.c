@@ -6,11 +6,11 @@
 /*   By: oel-mado <oel-mado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 04:15:06 by oel-mado          #+#    #+#             */
-/*   Updated: 2025/04/09 22:09:30 by oel-mado         ###   ########.fr       */
+/*   Updated: 2025/04/10 01:58:14 by oel-mado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../fractol.h"
+#include "fractol.h"
 
 double	ft_atod(char *arg)
 {

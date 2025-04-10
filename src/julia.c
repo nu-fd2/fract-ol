@@ -6,11 +6,11 @@
 /*   By: oel-mado <oel-mado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 01:05:07 by oel-mado          #+#    #+#             */
-/*   Updated: 2025/04/10 01:23:45 by oel-mado         ###   ########.fr       */
+/*   Updated: 2025/04/10 01:58:32 by oel-mado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../fractol.h"
+#include "fractol.h"
 
 int32_t	j_equation(t_data *data)
 {

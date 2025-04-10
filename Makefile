@@ -6,7 +6,7 @@
 #    By: oel-mado <oel-mado@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/02 21:35:20 by oel-mado          #+#    #+#              #
-#    Updated: 2025/04/10 01:23:14 by oel-mado         ###   ########.fr        #
+#    Updated: 2025/04/10 01:59:11 by oel-mado         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ MLXFLAGS = -Iinclude -ldl -lglfw -L"/Users/oel-mado/goinfre/homebrew/Cellar/glfw
 
 MLX_DIR = MLX42/build/libmlx42.a
 
-SRC = fractol.c \
+SRC = src/fractol.c \
 	src/do_fractol.c \
 	src/is_error.c \
 	src/ft_atod.c \
@@ -53,7 +53,7 @@ $(NAME): $(OBJ)
 $(BNAME): $(BOBJ)
 	$(CC) $(CFLAGS) $(BOBJ) $(MLX_DIR) -o $(BNAME) $(MLXFLAGS)
 
-src/%.o: src/%.c $(SRC) fractol.h
+src/%.o: src/%.c $(SRC) src/fractol.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 bonus/%.o: bonus/%.c $(BSRC) bonus/fractol_bonus.h

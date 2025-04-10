@@ -6,11 +6,11 @@
 /*   By: oel-mado <oel-mado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 04:16:22 by oel-mado          #+#    #+#             */
-/*   Updated: 2025/04/10 01:01:42 by oel-mado         ###   ########.fr       */
+/*   Updated: 2025/04/10 01:58:27 by oel-mado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../fractol.h"
+#include "fractol.h"
 
 void	is_error(void)
 {

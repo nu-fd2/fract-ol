@@ -6,14 +6,14 @@
 /*   By: oel-mado <oel-mado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 21:24:36 by oel-mado          #+#    #+#             */
-/*   Updated: 2025/04/10 01:24:15 by oel-mado         ###   ########.fr       */
+/*   Updated: 2025/04/10 01:59:46 by oel-mado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
-# include "MLX42/include/MLX42/MLX42.h"
+# include "../MLX42/include/MLX42/MLX42.h"
 # include <stdlib.h>
 # include <unistd.h>
 

@@ -6,11 +6,11 @@
 /*   By: oel-mado <oel-mado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:03:31 by oel-mado          #+#    #+#             */
-/*   Updated: 2025/04/09 22:11:30 by oel-mado         ###   ########.fr       */
+/*   Updated: 2025/04/10 01:58:23 by oel-mado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../fractol.h"
+#include "fractol.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
